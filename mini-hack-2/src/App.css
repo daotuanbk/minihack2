@@ -1,28 +1,104 @@
-.App {
-  text-align: center;
+html {
+  background: #fbfef9;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  background: #fbfef9;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.text_area {
+  resize: none;
+  font-family: sans-serif;
+  border: solid 1px #BF1363;
+  border-radius: 7px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 5px;
+}
+
+.main_title {
+  border-bottom: 2px solid #d0d2cf;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  font-weight: bolder;
+}
+
+.button_glow {
+  margin: 0 auto;
+  background: #BF1363;
+  color: #ffffff;
+  border: 0 none;
+  outline: 0 none;
+  border-radius: 7px;
+  padding: 7px 10px;
+  transition: all 0.15s ease-in-out;
+}
+
+.button_glow:hover {
+  background: #333333;
+  box-shadow: 0 0 5px #333333;
+}
+
+.button_glow:active {
+  box-shadow: 0 0 0 transparent;
+  transition: none;
+}
+
+.button {
+  display: flex;
+}
+
+.player_name {
+  padding: 5px 15px;
+  font-weight: bold;
+  border-top: 0px;
+}
+
+.sum {
+  background-color :#BF1363;
   color: white;
+  font-weight: bold;
 }
 
-.App-title {
-  font-size: 1.5em;
+.sum_score {
+  padding: 5px 15px;
 }
 
-.App-intro {
-  font-size: large;
+.sum_of_score {
+  padding: 5px 15px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.table {
+  table-layout:fixed;
+  width: 100%;
+  border-bottom: solid 1px #BF1363;
+}
+
+.table td {
+  border-top: 0px;
+}
+
+
+.score_gray {
+   background: #f4f4f4;
+}
+
+.score_white {
+  background: #fbfef9;
+} 
+
+.player_score {
+  resize: none;
+  font-family: sans-serif;
+  border: solid 1px gray;
+  border-radius: 7px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.add_round {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 70px 10px 70px;
+  margin-top: 50px;
 }

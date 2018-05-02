@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import NavBar from './components/NavBar'
+import Home from './components/Home'
+import Games from './components/Games'
+
+
 
 class App extends Component {
+  state = {
+    redirect: true,
+    players: ['','','','']
+  };
+
+getName = (players) => {this.setState({redirect:false, players: players})}
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+  return (   
+    this.state.redirect ? (<div>
+      <NavBar/>
+      <Home getName={this.getName} />
+    </div> 
+    ) : (
+      <div>
+        <NavBar/>
+        <Games players={this.state.players}/>
+        </div>
+    )
+  )
   }
 }
 
